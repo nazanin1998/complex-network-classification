@@ -1,21 +1,5 @@
-import numpy as np
-
-print("ff")
-# import keras
-print("ff")
-
-import tensorflow
-
-print("ff")
-# print(keras)
-print(tensorflow)
-
 from tensorflow.keras.models import Sequential
-
-print("ff")
 from tensorflow.keras.layers import Dropout, Dense, Flatten
-
-print("ff")
 from tensorflow.keras.optimizers import SGD
 from keras.layers.convolutional import Conv2D, MaxPooling2D
 from keras.utils import np_utils as u
@@ -23,6 +7,7 @@ from keras.datasets import cifar10
 
 # Lets start by loading the Cifar10 data
 (X, y), (X_test, y_test) = cifar10.load_data()
+print("dataset shape is: " + str(X.shape))
 
 # Keep in mind the images are in RGB
 # So we can normalise the data by diving by 255
@@ -70,7 +55,7 @@ model.fit(X, y, validation_data=(X_test, y_test), epochs=25,
 model.save_weights("cifar10.hdf5")
 # Finally print the accuracy of our model!
 print("Accuracy: &2.f%%" + str(model.evaluate(X_test, y_test)[1] * 100))
-# print(model.predict_classes(X[0:1]))
+print(model.predict_classes(X[0:1]))
 # Prints out a number
 # 1 - airplane, 2 - automobile, 3 - bird, 4 - cat, 5 - deer, 6 - dog
 # 7 - frog, 8 - horse, 9 - ship, 10 - truck
