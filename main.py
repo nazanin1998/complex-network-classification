@@ -8,6 +8,9 @@ from keras.datasets import cifar10
 # Lets start by loading the Cifar10 data
 (X, y), (X_test, y_test) = cifar10.load_data()
 print("dataset shape is: " + str(X.shape))
+print("dataset shape is: " + str(y.shape))
+print("dataset shape is: " + str(X_test.shape))
+print("dataset shape is: " + str(y_test.shape))
 
 # Keep in mind the images are in RGB
 # So we can normalise the data by diving by 255
