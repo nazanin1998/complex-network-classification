@@ -1,3 +1,4 @@
-./cifar10.hdf5
-./training_1
-./saved_model
+cifar10.hdf5
+training_1/
+saved_model/
+dataset/
